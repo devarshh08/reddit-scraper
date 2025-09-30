@@ -10,8 +10,8 @@
 ![Streamlit](https://img.shields.io/badge/streamlit-v1.28+-FF4B4B.svg?style=flat-square)
 ![PRAW](https://img.shields.io/badge/praw-v7.7+-orange.svg?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)
-![GitHub Stars](https://img.shields.io/github/stars/yourusername/reddit-scraper?style=flat-square)
-![GitHub Forks](https://img.shields.io/github/forks/yourusername/reddit-scraper?style=flat-square)
+![GitHub Stars](https://img.shields.io/github/stars/devarshh08/reddit-scraper?style=flat-square)
+![GitHub Forks](https://img.shields.io/github/forks/devarshh08/reddit-scraper?style=flat-square)
 
 </div>
 
