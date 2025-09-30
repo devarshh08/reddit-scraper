@@ -1,0 +1,52 @@
+Category,Topic,Priority,Description
+Core Technology,reddit,High,Reddit platform integration
+Core Technology,scraper,High,Web scraping functionality
+Core Technology,streamlit,High,Streamlit web framework
+Core Technology,python,High,Python programming language
+Core Technology,praw,High,Python Reddit API Wrapper
+Data Processing,data-mining,High,Data extraction and mining
+Data Processing,data-analysis,Medium,Data analysis capabilities
+Data Processing,data-cleaning,Medium,Data cleaning functionality
+Data Processing,json,Medium,JSON data format handling
+Data Processing,text-processing,Medium,Text processing capabilities
+Web Development,web-app,High,Web application
+Web Development,dashboard,Medium,Dashboard interface
+Web Development,ui,Medium,User interface
+Web Development,frontend,Low,Frontend development
+API Integration,reddit-api,High,Reddit API integration
+API Integration,api,Medium,API usage
+API Integration,oauth,Low,OAuth authentication
+Application Type,streamlit-app,High,Streamlit application
+Application Type,webapp,Medium,Web application
+Application Type,tool,Medium,Utility tool
+Application Type,gui,Medium,Graphical user interface
+Use Cases,social-media,High,Social media data
+Use Cases,content-analysis,Medium,Content analysis
+Use Cases,market-research,Medium,Market research tool
+Use Cases,academic-research,Medium,Academic research
+Use Cases,sentiment-analysis,Medium,Sentiment analysis
+Use Cases,nlp,Medium,Natural language processing
+Development,automation,Medium,Automation tool
+Development,python3,Medium,Python 3 compatibility
+Development,open-source,Medium,Open source project
+Development,cross-platform,Low,Cross platform compatibility
+Deployment,cloud,Medium,Cloud deployment
+Deployment,heroku,Low,Heroku deployment
+Deployment,docker,Low,Docker containerization
+Data Export,csv,Low,CSV export functionality
+Data Export,txt,Low,Text file export
+Data Export,export,Low,Data export capabilities
+Analytics,statistics,Low,Statistical analysis
+Analytics,visualization,Low,Data visualization
+Analytics,reporting,Low,Report generation
+Community,reddit-data,Medium,Reddit data extraction
+Community,subreddit,Medium,Subreddit targeting
+Community,comments,Medium,Comment extraction
+Community,posts,Medium,Post extraction
+Research,data-science,High,Data science applications
+Research,research-tool,Medium,Research tool
+Research,academic,Low,Academic use
+Research,study,Low,Research study tool
+Productivity,batch-processing,Low,Batch processing
+Productivity,bulk-download,Low,Bulk download capability
+Productivity,time-saving,Low,Time saving tool
