@@ -36,11 +36,6 @@
 
 <div align="center">
 
-### 📱 App Preview
-
-<!-- Add screenshots here when available -->
-*Screenshots coming soon! For now, [try the live demo](https://screddit.streamlit.app/)*
-
 </div>
 
 ## 🌟 Features
