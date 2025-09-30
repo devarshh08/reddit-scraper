@@ -30,7 +30,7 @@
 
 ## 🎯 Try It Live
 
-**👉 [Launch the App on Streamlit Cloud](https://screddit.streamlit.app/) 👈**
+**👉 [Try the App by clicking here!](https://screddit.streamlit.app/) 👈**
 
 *No installation required! Try all features instantly in your browser.*
 
