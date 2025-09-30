@@ -5,9 +5,18 @@ from dotenv import load_dotenv
 from datetime import datetime
 from tqdm import tqdm
 
-CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
-CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
-USER_AGENT = os.getenv("REDDIT_USER_AGENT")
+# Load environment variables
+load_dotenv()
+
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+USER_AGENT = os.getenv("USER_AGENT")
+
+# Check if credentials are loaded
+if not all([CLIENT_ID, CLIENT_SECRET, USER_AGENT]):
+    print("Error: Missing Reddit API credentials in .env file")
+    print("Please create a .env file with CLIENT_ID, CLIENT_SECRET, and USER_AGENT")
+    exit(1)
 
 def scrape_subreddit(subreddit_name, limit=10, sort="new", time_filter="all", keywords=None):
     reddit = praw.Reddit(
