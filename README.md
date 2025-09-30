@@ -380,8 +380,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 If this project helped you, please ⭐ **star the repository** and share it with others!
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/reddit-scraper?style=social)](https://github.com/devarshh08/reddit-scraper/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/reddit-scraper?style=social)](https://github.com/devarshh08/reddit-scraper/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/devarshh08/reddit-scraper?style=social)](https://github.com/devarshh08/reddit-scraper/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/devarshh08/reddit-scraper?style=social)](https://github.com/devarshh08/reddit-scraper/network/members)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fyourusername%2Freddit-scraper)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20Reddit%20scraper%20and%20data%20cleaner!&url=https://github.com/yourusername/reddit-scraper)
 
 ---
