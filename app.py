@@ -8,11 +8,7 @@ import io
 import time
 from dotenv import load_dotenv
 
-# Load environment variables (try multiple paths)
-load_dotenv()  # Try current directory first
-load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))  # Try script directory
-
-# Page config
+# Page config (must be first Streamlit command)
 st.set_page_config(
     page_title="Reddit Scraper & Data Cleaner",
     page_icon="🤖",
@@ -20,10 +16,21 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Reddit API credentials from environment
-CLIENT_ID = os.getenv("CLIENT_ID")
-CLIENT_SECRET = os.getenv("CLIENT_SECRET")
-USER_AGENT = os.getenv("USER_AGENT")
+# Load environment variables (try multiple paths)
+load_dotenv()  # Try current directory first
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))  # Try script directory
+
+# Reddit API credentials - try Streamlit secrets first, then environment variables
+try:
+    # For Streamlit Cloud deployment
+    CLIENT_ID = st.secrets["CLIENT_ID"]
+    CLIENT_SECRET = st.secrets["CLIENT_SECRET"] 
+    USER_AGENT = st.secrets["USER_AGENT"]
+except (KeyError, FileNotFoundError):
+    # For local development with .env file
+    CLIENT_ID = os.getenv("CLIENT_ID")
+    CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+    USER_AGENT = os.getenv("USER_AGENT")
 
 # Debug info (remove this after testing)
 # st.write(f"Debug - Current working directory: {os.getcwd()}")
@@ -32,22 +39,26 @@ USER_AGENT = os.getenv("USER_AGENT")
 
 # Check if credentials are loaded
 if not all([CLIENT_ID, CLIENT_SECRET, USER_AGENT]):
-    st.error(f"""
+    st.error("""
     ⚠️ **Missing Reddit API Credentials**
     
-    **Debug Information:**
-    - Current working directory: `{os.getcwd()}`
-    - Script directory: `{os.path.dirname(os.path.abspath(__file__))}`
-    - .env file exists: `{os.path.exists('.env')}`
-    - .env in script dir: `{os.path.exists(os.path.join(os.path.dirname(__file__), '.env'))}`
+    **For Local Development:**
+    Create a `.streamlit/secrets.toml` file in your project directory with:
+    ```toml
+    CLIENT_ID = "your_client_id_here"
+    CLIENT_SECRET = "your_client_secret_here"
+    USER_AGENT = "script:your-app-name:v1.0 (by u/your_username)"
+    ```
     
-    **Solution:**
-    Please ensure a `.env` file exists in your project directory with:
-    ```
-    CLIENT_ID=your_client_id_here
-    CLIENT_SECRET=your_client_secret_here
-    USER_AGENT=your_user_agent_here
-    ```
+    **For Streamlit Cloud Deployment:**
+    1. Go to your app settings in Streamlit Cloud
+    2. Open "Secrets" section
+    3. Paste the contents of your secrets.toml file
+    
+    **Get Reddit API Credentials:**
+    1. Go to https://www.reddit.com/prefs/apps
+    2. Create a new app (choose "script" type)
+    3. Use your CLIENT_ID and CLIENT_SECRET
     """)
     st.stop()
 

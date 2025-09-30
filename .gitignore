@@ -32,5 +32,6 @@ Thumbs.db
 *_output.json
 *_cleaned.txt
 
-# Streamlit cache
+# Streamlit
 .streamlit/
+.streamlit/secrets.toml
