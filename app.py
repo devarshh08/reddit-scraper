@@ -8,8 +8,9 @@ import io
 import time
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load environment variables (try multiple paths)
+load_dotenv()  # Try current directory first
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))  # Try script directory
 
 # Page config
 st.set_page_config(
@@ -24,12 +25,24 @@ CLIENT_ID = os.getenv("CLIENT_ID")
 CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 USER_AGENT = os.getenv("USER_AGENT")
 
+# Debug info (remove this after testing)
+# st.write(f"Debug - Current working directory: {os.getcwd()}")
+# st.write(f"Debug - Script directory: {os.path.dirname(__file__)}")
+# st.write(f"Debug - CLIENT_ID loaded: {bool(CLIENT_ID)}")
+
 # Check if credentials are loaded
 if not all([CLIENT_ID, CLIENT_SECRET, USER_AGENT]):
-    st.error("""
+    st.error(f"""
     ⚠️ **Missing Reddit API Credentials**
     
-    Please create a `.env` file in the project directory with the following content:
+    **Debug Information:**
+    - Current working directory: `{os.getcwd()}`
+    - Script directory: `{os.path.dirname(os.path.abspath(__file__))}`
+    - .env file exists: `{os.path.exists('.env')}`
+    - .env in script dir: `{os.path.exists(os.path.join(os.path.dirname(__file__), '.env'))}`
+    
+    **Solution:**
+    Please ensure a `.env` file exists in your project directory with:
     ```
     CLIENT_ID=your_client_id_here
     CLIENT_SECRET=your_client_secret_here
